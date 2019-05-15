@@ -187,7 +187,6 @@ class _WhatNewsState extends State<WhatNews> {
       color: Colors.grey.shade100,
     );
   }
-
   Widget _drawRecentUpdatesCard(Color color) {
     return Card(
       child: Column(
