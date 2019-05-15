@@ -49,6 +49,7 @@ flutter:
     - assets/images/im3.jpg
     - assets/images/im4.jpg
     - assets/images/im5.jpg
+    - assets/images/placeHolder.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:first_desgin001/shared_ui/NavagatinDrawer.dart';
+import 'package:first_desgin001/screen/favoriteScreen.dart';
+import 'package:first_desgin001/screen/what_news.dart';
+import 'package:first_desgin001/screen/popular.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -42,9 +45,9 @@ class _HomeScreenState extends State<HomeScreen>
       ),
       drawer: NavagatinDrawer(),
       body:TabBarView(children: [
-        Container(color: Colors.grey,),
-        Container(color: Colors.deepPurple,),
-        Container(color: Colors.amberAccent,),
+       WhatNews(),
+        PopularScreen(),
+        FavoriteScreen(),
       ],
         controller:_tabController,
       ) ,
