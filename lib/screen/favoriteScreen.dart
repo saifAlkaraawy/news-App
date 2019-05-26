@@ -27,6 +27,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
     return ListView.builder(
       itemBuilder: (context, postion) {
         return Card(
+          margin: EdgeInsets.only(bottom: 10),
           child: Column(
             children: <Widget>[
               _authorRow(),

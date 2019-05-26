@@ -41,11 +41,12 @@ class _HomeScreenState extends State<HomeScreen>
             Text("fovarte"),
           ],
           controller: _tabController,
+          indicatorColor: Colors.white,
         ),
       ),
       drawer: NavagatinDrawer(),
       body:TabBarView(children: [
-       WhatNews(),
+        WhatNews(),
         PopularScreen(),
         FavoriteScreen(),
       ],
