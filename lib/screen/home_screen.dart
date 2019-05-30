@@ -3,6 +3,7 @@ import 'package:first_desgin001/shared_ui/NavagatinDrawer.dart';
 import 'package:first_desgin001/screen/favoriteScreen.dart';
 import 'package:first_desgin001/screen/what_news.dart';
 import 'package:first_desgin001/screen/popular.dart';
+import 'package:first_desgin001/api/authors_API.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
+  AuthorsAPI authorsAPI=AuthorsAPI();
   @override
  void initState() {
     // TODO: implement initState
@@ -21,6 +23,8 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    authorsAPI.fetchAllAuthors();
+    authorsAPI.showAuthor();
     return Scaffold(
       appBar: AppBar(
         title: Text("Eplore"),

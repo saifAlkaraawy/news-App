@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:first_desgin001/modles/navmenuitem.dart';
 import 'package:first_desgin001/screen/home_screen.dart';
+import 'package:first_desgin001/screen/headLineNews.dart';
 
 class NavagatinDrawer extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class NavagatinDrawer extends StatefulWidget {
 class _NavagatinDrawerState extends State<NavagatinDrawer> {
   List<NavMenuItem> navItem = [
     NavMenuItem("explore", () => HomeScreen()),
+    NavMenuItem("HeadLine News", () => HeadLineNews()),
   ];
 
   @override
@@ -29,11 +31,15 @@ class _NavagatinDrawerState extends State<NavagatinDrawer> {
                 color: Colors.grey.shade400,
               ),
               onTap: () {
+
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => navItem[postion].destination()),
                 );
+
+
               },
             ),
           );
